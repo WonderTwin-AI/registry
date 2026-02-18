@@ -1,4 +1,32 @@
 {
   "schema_version": 1,
-  "twins": {}
+  "twins": {
+    "stripe": {
+      "description": "Simulates the Stripe Connect and Payouts API surface, including accounts, external accounts, transfers, balance, payouts, and events with webhook delivery.",
+      "repo": "https://github.com/wondertwin-ai/wondertwin",
+      "category": "payments",
+      "author": "WonderTwin",
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "released": "2026-02-18",
+          "sdk_package": "github.com/stripe/stripe-go",
+          "sdk_version": "v81",
+          "tier": "free",
+          "checksums": {
+            "darwin-amd64": "sha256:3eb42a311c0df67423b97bc4a85bd32b25dafba72edcf9c0cffc9d46bda3e4aa",
+            "darwin-arm64": "sha256:d8c18f7973ed2e64aae74c5306d855313bb88caf62daae9b236a2327eb911db5",
+            "linux-amd64": "sha256:4ecc210a893ae0cf8efef5e198734a3d5029e915c94021642f3e63c0b17aebb3",
+            "linux-arm64": "sha256:26539dfb4a901521f3c98377f0c7bdb007caaeeda7fed7a5029a8545a26b7841"
+          },
+          "binary_urls": {
+            "darwin-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-stripe-v0.1.0/twin-stripe-darwin-amd64",
+            "darwin-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-stripe-v0.1.0/twin-stripe-darwin-arm64",
+            "linux-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-stripe-v0.1.0/twin-stripe-linux-amd64",
+            "linux-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-stripe-v0.1.0/twin-stripe-linux-arm64"
+          }
+        }
+      }
+    }
+  }
 }

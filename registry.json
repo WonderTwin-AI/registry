@@ -27,6 +27,33 @@
           }
         }
       }
+    },
+    "twilio": {
+      "description": "Simulates the Twilio Messaging and Verify API surfaces, including SMS message send/retrieve and phone number verification workflows.",
+      "repo": "https://github.com/wondertwin-ai/wondertwin",
+      "category": "communications",
+      "author": "WonderTwin",
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "released": "2026-02-18",
+          "sdk_package": "github.com/twilio/twilio-go",
+          "sdk_version": "v1",
+          "tier": "free",
+          "checksums": {
+            "darwin-amd64": "sha256:674d8b06c499a001663d172ab729d427285c172cfd94788cf8e9ce4f51bcc436",
+            "darwin-arm64": "sha256:40e65a06d94b3316e262a10b975c60ad76ce757547b76fef52f7e27109f5fcb8",
+            "linux-amd64": "sha256:56fccd58318daae16f6d79402fd695755b091a4d945b7a6c40421d16c5a55efb",
+            "linux-arm64": "sha256:214048680ae8f42dafcf1c270bb146406a7b9a0589457c7d630a940762ba85d1"
+          },
+          "binary_urls": {
+            "darwin-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-twilio-v0.1.0/twin-twilio-darwin-amd64",
+            "darwin-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-twilio-v0.1.0/twin-twilio-darwin-arm64",
+            "linux-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-twilio-v0.1.0/twin-twilio-linux-amd64",
+            "linux-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-twilio-v0.1.0/twin-twilio-linux-arm64"
+          }
+        }
+      }
     }
   }
 }

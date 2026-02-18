@@ -28,6 +28,33 @@
         }
       }
     },
+    "logodev": {
+      "description": "Simulates the Logo.dev logo retrieval API, returning deterministic SVG placeholder logos for any domain.",
+      "repo": "https://github.com/wondertwin-ai/wondertwin",
+      "category": "media",
+      "author": "WonderTwin",
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "released": "2026-02-18",
+          "sdk_package": "logo.dev",
+          "sdk_version": "v1",
+          "tier": "free",
+          "checksums": {
+            "darwin-amd64": "sha256:07d38917bef31bd62ed4339c06677870d00e5c10fc2d68f4c3743ce173bcaed0",
+            "darwin-arm64": "sha256:a5cf95d6b44658ac8bfd56c0ae0f7229d8069f33e4bee1e1dd3b566adc694451",
+            "linux-amd64": "sha256:7f20b2250d6cc15a26856eb935604bea5bb067e46a314bff4a7f560ba42a4363",
+            "linux-arm64": "sha256:f248cf7d6f37747f9a1d2ce34e80c8f17e36c660e164c4df756187cd8b770b39"
+          },
+          "binary_urls": {
+            "darwin-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-logodev-v0.1.0/twin-logodev-darwin-amd64",
+            "darwin-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-logodev-v0.1.0/twin-logodev-darwin-arm64",
+            "linux-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-logodev-v0.1.0/twin-logodev-linux-amd64",
+            "linux-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-logodev-v0.1.0/twin-logodev-linux-arm64"
+          }
+        }
+      }
+    },
     "resend": {
       "description": "Simulates the Resend email sending API, including single and batch email dispatch with delivery tracking.",
       "repo": "https://github.com/wondertwin-ai/wondertwin",

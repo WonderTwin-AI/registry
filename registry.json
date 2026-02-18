@@ -1,6 +1,33 @@
 {
   "schema_version": 1,
   "twins": {
+    "clerk": {
+      "description": "Simulates the Clerk Backend API for user management, sessions, organizations, and JWT/JWKS endpoints for token verification.",
+      "repo": "https://github.com/wondertwin-ai/wondertwin",
+      "category": "auth",
+      "author": "WonderTwin",
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "released": "2026-02-18",
+          "sdk_package": "github.com/clerk/clerk-sdk-go",
+          "sdk_version": "v2",
+          "tier": "free",
+          "checksums": {
+            "darwin-amd64": "sha256:6d9cc38b8e04f34808a4fc108a956ea834b19f532519c077de7b2aa3cba7f90c",
+            "darwin-arm64": "sha256:baa7eff7de83b331f35643b4a6c990f83c97672998d170ccca3dc7bb89423ff9",
+            "linux-amd64": "sha256:183fa7c54b31615d81512f6b8720d5927d84787b109e33050373b7dab57ccd94",
+            "linux-arm64": "sha256:6594eb4adbd652907958686608c6f159fd397b649b8887e24a5c446c6702d164"
+          },
+          "binary_urls": {
+            "darwin-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-clerk-v0.1.0/twin-clerk-darwin-amd64",
+            "darwin-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-clerk-v0.1.0/twin-clerk-darwin-arm64",
+            "linux-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-clerk-v0.1.0/twin-clerk-linux-amd64",
+            "linux-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-clerk-v0.1.0/twin-clerk-linux-arm64"
+          }
+        }
+      }
+    },
     "stripe": {
       "description": "Simulates the Stripe Connect and Payouts API surface, including accounts, external accounts, transfers, balance, payouts, and events with webhook delivery.",
       "repo": "https://github.com/wondertwin-ai/wondertwin",

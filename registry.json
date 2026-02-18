@@ -55,6 +55,33 @@
         }
       }
     },
+    "posthog": {
+      "description": "Simulates the PostHog event capture and feature flag evaluation API surfaces, including single capture, batch capture, and the /decide endpoint.",
+      "repo": "https://github.com/wondertwin-ai/wondertwin",
+      "category": "analytics",
+      "author": "WonderTwin",
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "released": "2026-02-18",
+          "sdk_package": "github.com/posthog/posthog-go",
+          "sdk_version": "v0",
+          "tier": "free",
+          "checksums": {
+            "darwin-amd64": "sha256:c1f51dd42452fc3fef6592b02003160da4ed59ba14d2a90a367105d91cfe3849",
+            "darwin-arm64": "sha256:d9f637ef2988baecbc133e96f157b47bdfb8c85c011550733405d4b1ad5351be",
+            "linux-amd64": "sha256:fcb3ddb8a670a4ff6de7928aafe5f3c6436667c54e12c253627bcb3ff312426a",
+            "linux-arm64": "sha256:18e7c86c65ea4a039e75d94c58429c6389dd5c0b5a8e03c98cb56e15bf99a7c9"
+          },
+          "binary_urls": {
+            "darwin-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-posthog-v0.1.0/twin-posthog-darwin-amd64",
+            "darwin-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-posthog-v0.1.0/twin-posthog-darwin-arm64",
+            "linux-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-posthog-v0.1.0/twin-posthog-linux-amd64",
+            "linux-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-posthog-v0.1.0/twin-posthog-linux-arm64"
+          }
+        }
+      }
+    },
     "resend": {
       "description": "Simulates the Resend email sending API, including single and batch email dispatch with delivery tracking.",
       "repo": "https://github.com/wondertwin-ai/wondertwin",

@@ -28,6 +28,33 @@
         }
       }
     },
+    "resend": {
+      "description": "Simulates the Resend email sending API, including single and batch email dispatch with delivery tracking.",
+      "repo": "https://github.com/wondertwin-ai/wondertwin",
+      "category": "email",
+      "author": "WonderTwin",
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "released": "2026-02-18",
+          "sdk_package": "github.com/resend/resend-go",
+          "sdk_version": "v2",
+          "tier": "free",
+          "checksums": {
+            "darwin-amd64": "sha256:f1e5774a712c675fee0323ed57b018902e12bf966a805f599d1261a38348f701",
+            "darwin-arm64": "sha256:4798910a0a8f69c849c31eff4c3cdf0878239a9a0f9ac486932e9297caca11cd",
+            "linux-amd64": "sha256:9950bc7dfb9af1047b4c96a56335578356e89d7f0542916e4ef912ff16882ec2",
+            "linux-arm64": "sha256:d9829921b7adfc0b80a1c29cf8b86d20d8304efeca4feec4e099e292c61c2370"
+          },
+          "binary_urls": {
+            "darwin-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-resend-v0.1.0/twin-resend-darwin-amd64",
+            "darwin-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-resend-v0.1.0/twin-resend-darwin-arm64",
+            "linux-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-resend-v0.1.0/twin-resend-linux-amd64",
+            "linux-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-resend-v0.1.0/twin-resend-linux-arm64"
+          }
+        }
+      }
+    },
     "stripe": {
       "description": "Simulates the Stripe Connect and Payouts API surface, including accounts, external accounts, transfers, balance, payouts, and events with webhook delivery.",
       "repo": "https://github.com/wondertwin-ai/wondertwin",

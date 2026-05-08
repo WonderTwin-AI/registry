@@ -1,11 +1,12 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "twins": {
     "logodev": {
       "description": "Simulates the Logo.dev logo retrieval API, returning deterministic SVG placeholder logos for any domain.",
       "repo": "https://github.com/wondertwin-ai/wondertwin",
       "category": "media",
       "author": "WonderTwin",
+      "tier": "",
       "latest": "0.1.0",
       "versions": {
         "0.1.0": {
@@ -28,11 +29,42 @@
         }
       }
     },
+    "measure": {
+      "description": "Simulates the Measure billing and revenue-management API — Customers, Subscriptions, Invoices, Products, Pricings (fixed/gradient/step), Bundles, Contracts, Credits, Discounts, Entitlements, Billable Items/Metrics/Objects, Usage Events, One-Time Charges, Payment Transactions/Methods, Customer Portal links, Cached Metrics reports — with 33 webhook events and runtime-toggleable quirks.",
+      "repo": "https://github.com/wondertwin-ai/wondertwin-pro",
+      "category": "billing-revenue-management",
+      "author": "WonderTwin",
+      "tier": "commercial",
+      "download_auth": "required",
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "released": "2026-05-08",
+          "sdk_package": "rest-direct",
+          "sdk_version": "openapi-1.0.0",
+          "tier": "commercial",
+          "checksums": {
+            "0.1.0.cdx.json": "sha256:a120db6c9b292fffe4b567c6064a742284ce1d44c2c194cfeb288df90b6c7eb0",
+            "darwin-amd64": "sha256:5111819131180db5e3dbfa10e54dd6dd60496a01a54384de112caf08b3c5ba19",
+            "darwin-arm64": "sha256:ecd591257a2f832d8043d616d224070bac44dc479620376e529a35a700dd7b5b",
+            "linux-amd64": "sha256:484186ab85311705c43ebc5c0cfe872192ca55e76a030570759646677cd6918d",
+            "linux-arm64": "sha256:9a81288d46d81709eade1b9605a50a3ceb0def28113366e7bf5bfff30a220f01"
+          },
+          "binary_urls": {
+            "darwin-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-measure-v0.1.0/twin-measure-darwin-amd64",
+            "darwin-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-measure-v0.1.0/twin-measure-darwin-arm64",
+            "linux-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-measure-v0.1.0/twin-measure-linux-amd64",
+            "linux-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-measure-v0.1.0/twin-measure-linux-arm64"
+          }
+        }
+      }
+    },
     "posthog": {
       "description": "Simulates the PostHog event capture and feature flag evaluation API surfaces, including single capture, batch capture, and the /decide endpoint.",
       "repo": "https://github.com/wondertwin-ai/wondertwin",
       "category": "analytics",
       "author": "WonderTwin",
+      "tier": "",
       "latest": "0.1.0",
       "versions": {
         "0.1.0": {
@@ -60,6 +92,7 @@
       "repo": "https://github.com/wondertwin-ai/wondertwin",
       "category": "email",
       "author": "WonderTwin",
+      "tier": "",
       "latest": "0.1.0",
       "versions": {
         "0.1.0": {
@@ -87,6 +120,7 @@
       "repo": "https://github.com/wondertwin-ai/wondertwin",
       "category": "payments",
       "author": "WonderTwin",
+      "tier": "",
       "latest": "0.1.0",
       "versions": {
         "0.1.0": {
@@ -114,6 +148,7 @@
       "repo": "https://github.com/wondertwin-ai/wondertwin",
       "category": "communications",
       "author": "WonderTwin",
+      "tier": "",
       "latest": "0.1.0",
       "versions": {
         "0.1.0": {

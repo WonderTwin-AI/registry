@@ -146,7 +146,7 @@
           "sdk_package": "github.com/stripe/stripe-go",
           "sdk_version": "v81",
           "api_version": "2024-12-18",
-          "tier": "community",
+          "tier": "free",
           "checksums": {
             "0.2.0.cdx.json": "sha256:793d7e3a285b660238a77785bbd73b32059c68e52809652f56fa7c350566420b",
             "darwin-amd64": "sha256:77a777095663b986474891bb3dc8f357f283b28fbb69d407d38144fcddb99e28",

@@ -1,0 +1,60 @@
+name: Verify registry
+
+# This registry is public. Its job is to distribute community twins, so the
+# gate that matters most is not "is this JSON well-formed" but "did a
+# commercial artifact just get published here". twin-measure reached this
+# repo on 2026-05-08 with tier=commercial and download_auth=required and sat
+# there until 2026-08-24. verify-registry now fails on that shape.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    # Deliberately unfiltered, matching the wondertwin CI: `branches:` on
+    # pull_request matches the PR's BASE branch, so a `[main]` filter gives a
+    # stacked PR zero checks.
+  schedule:
+    # Daily, because the manifest is not the only way this repo can go wrong.
+    # Release assets can be deleted out from under a published entry, which no
+    # PR would ever catch.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the registry
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: registry
+
+      # The validator lives with the code it validates, in the public
+      # wondertwin repo. Tracking main keeps the rules here current; that is
+      # the intent, so a tightened rule takes effect without a bump in this
+      # repo.
+      - name: Check out the validator
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: wondertwin-ai/wondertwin
+          ref: main
+          path: wondertwin
+
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: wondertwin/go.mod
+          cache-dependency-path: wondertwin/go.sum
+
+      # --registry-file validates the registry.json in THIS checkout, so a pull
+      # request is gated before merge rather than after publication. --public
+      # is the default and is passed explicitly because it is the point of the
+      # job: no commercial tier, no download_auth, no non-public repo URLs.
+      - name: Verify registry
+        working-directory: wondertwin
+        run: |
+          go run ./cmd/verify-registry \
+            --registry-file "$GITHUB_WORKSPACE/registry/registry.json" \
+            --public

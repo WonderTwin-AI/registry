@@ -6,7 +6,7 @@
       "repo": "https://github.com/wondertwin-ai/wondertwin",
       "category": "media",
       "author": "WonderTwin",
-      "tier": "",
+      "tier": "community",
       "latest": "0.1.0",
       "versions": {
         "0.1.0": {
@@ -34,7 +34,7 @@
       "repo": "https://github.com/wondertwin-ai/wondertwin",
       "category": "analytics",
       "author": "WonderTwin",
-      "tier": "",
+      "tier": "community",
       "latest": "0.1.0",
       "versions": {
         "0.1.0": {
@@ -62,7 +62,7 @@
       "repo": "https://github.com/wondertwin-ai/wondertwin",
       "category": "email",
       "author": "WonderTwin",
-      "tier": "",
+      "tier": "community",
       "latest": "0.1.0",
       "versions": {
         "0.1.0": {
@@ -141,7 +141,7 @@
       "repo": "https://github.com/wondertwin-ai/wondertwin",
       "category": "communications",
       "author": "WonderTwin",
-      "tier": "",
+      "tier": "community",
       "latest": "0.1.0",
       "versions": {
         "0.1.0": {

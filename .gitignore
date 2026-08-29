@@ -1,0 +1,3 @@
+
+# Claude Code agent worktrees (one working copy per concurrent session)
+.claude/worktrees/

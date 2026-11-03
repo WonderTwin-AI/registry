@@ -29,6 +29,38 @@
         }
       }
     },
+    "plaid": {
+      "description": "Plaid app emulator: all 26 operations of build plan plaid-bp1 for the Sandbox flows of the supported use cases, served in Plaid's response shape and checked against plaid-python 44.0.0. Items come from /sandbox/public_token/create, so Plaid Link is not emulated. A new Item carries three accounts, two transactions and 22 institutions taken from Plaid's public docs; these fixtures are provisional until an authenticated Sandbox capture replaces them. Identity match scores and recurring streams follow the emulator's own rules inside Plaid's documented bands, not Plaid's algorithms. Webhooks are signed and delivered with the kit's retry policy. The Stripe app emulator does not yet accept the bank account token. divergences.json lists every gap from Plaid's behaviour.",
+      "repo": "https://github.com/wondertwin-ai/wondertwin",
+      "category": "fintech",
+      "author": "WonderTwin",
+      "tier": "community",
+      "latest": "ca9fea68d873",
+      "versions": {
+        "ca9fea68d873": {
+          "released": "2026-11-03",
+          "sdk_package": "plaid-python",
+          "sdk_version": "44.0.0",
+          "tier": "free",
+          "checksums": {
+            "darwin-amd64": "sha256:38b4e9099165e030b3163a6f773d261d07dc8315d0cae902f7e26decb99b0c21",
+            "darwin-arm64": "sha256:07cf58ec0c89e229bcfa60986cfbe0138d433a449e3ffb254fce024a0130139d",
+            "linux-amd64": "sha256:b2efbcdf315bea2353711180bc1e905992aa68a1bad9fb23d0572dde3089bc41",
+            "linux-arm64": "sha256:df3bbfbf656f99e6bb944b997ca065d05603a9e73b970facc0315b160b7335c2"
+          },
+          "binary_urls": {
+            "darwin-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-plaid-vca9fea68d873/twin-plaid-darwin-amd64",
+            "darwin-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-plaid-vca9fea68d873/twin-plaid-darwin-arm64",
+            "linux-amd64": "https://github.com/wondertwin-ai/registry/releases/download/twin-plaid-vca9fea68d873/twin-plaid-linux-amd64",
+            "linux-arm64": "https://github.com/wondertwin-ai/registry/releases/download/twin-plaid-vca9fea68d873/twin-plaid-linux-arm64"
+          },
+          "release_type": "stable",
+          "maintenance_status": "active",
+          "changelog": "First release of the Plaid app emulator. It targets the Plaid API version 2020-09-14 (OpenAPI revision 1.740.1) in the Sandbox environment, with Items created without Plaid Link.\n\n### Supported\n- 26 operations: Sandbox public token creation, public token exchange, Link token create and get, Item get, remove, access token invalidation and webhook update, accounts and balances, auth, identity and identity match, institutions get, search and get_by_id, transactions sync, get, refresh and recurring, Sandbox transaction creation, processor tokens and Stripe bank account tokens, Sandbox reset_login and fire_webhook, and the webhook verification key\n- Plaid's documented errors, including the Sandbox error_{CODE} passwords, in Plaid's response shape with the request_id and error fields\n- Signed webhooks with the served verification key, delivered per Item, for the documented sample bodies and for transaction updates\n- Product gating: identity, transactions and auth routes answer PRODUCT_NOT_ENABLED for an Item linked without the product, and an unknown institution is refused\n- State snapshots, reset and seeding through /admin, plus two routes of the app emulator's own to modify and remove a transaction so /transactions/sync reports modified and removed rows\n\n### Verified\n- Official SDK plaid-python 44.0.0: 32 of 32 cases and 16 of 16 supported use cases against the app emulator\n- Through LocalStack: not run\n- Live comparison with Plaid: not run\n\n### Not modelled\n- Plaid Link, update mode completion, multi-factor and persona test users, and products outside the supported use cases (investments, liabilities, transfer, micro-deposit auth). Every deliberate difference from Plaid is listed in twin-plaid/divergences.json\n\n### Known issues\n- The starting accounts, account numbers, institutions and two transactions are taken from Plaid's public documentation, not captured from the Sandbox, so they differ from what Plaid's Sandbox returns by default\n- Identity match scores and recurring transaction streams follow the app emulator's own rules inside Plaid's documented bands, not Plaid's algorithms\n- The Stripe app emulator does not yet accept the bank account token this app emulator issues\n- Rate limits are not emulated, and any non-empty client_id and secret pair is accepted unless PLAID_CLIENT_ID and PLAID_SECRET are set\n- Balances do not change when transactions are created, and /sandbox/transactions/create works on any Item\n- Failed webhook deliveries are retried three times, one second apart, not on Plaid's 24 hour schedule",
+          "release_digest": "sha256:ca9fea68d873283451cdf41eae2895121a2df26cafa4d842daf2e146ee2c9338"
+        }
+      }
+    },
     "posthog": {
       "description": "Simulates the PostHog event capture and feature flag evaluation API surfaces, including single capture, batch capture, and the /decide endpoint.",
       "repo": "https://github.com/wondertwin-ai/wondertwin",
